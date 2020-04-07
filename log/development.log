@@ -761,3 +761,71 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
   Rendered posts/edit.html.erb within layouts/application (16.0ms)
 Completed 200 OK in 347ms (Views: 318.0ms | ActiveRecord: 0.4ms)
+Started GET "/posts/1/edit" for ::1 at 2020-04-07 15:56:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (110.8ms)
+Completed 200 OK in 793ms (Views: 675.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2020-04-07 15:57:04 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bZWOnZHByJXI7QKotdelqAwzP5eLUvkBsuQcfUjxDA72Whq1a8flSEwgFeeLY/bJ1Gx5Kw3RsooSko5FzJQmXg==", "post"=>{"title"=>"Rails Introduction Quiz", "description"=>"new\r\n"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.9ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", nil], ["description", nil], ["updated_at", "2020-04-07 22:57:04.486356"], ["id", 1]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 37ms (ActiveRecord: 21.9ms)
+
+
+Started GET "/posts/1" for ::1 at 2020-04-07 15:57:04 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for ::1 at 2020-04-07 15:59:14 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1" [0m for [0;33;49m1[0m[0;30;49m  at 2020-04-07 16:00:06 -0700[0m
+[[1;30;49mDEBUG[0m]   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#show[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/show.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/show.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m1.6ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in [0;33;49m301ms[0m [0;30;49m(Views: 282.7ms | ActiveRecord: 0.8ms)[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1" [0m for [0;33;49m1[0m[0;30;49m  at 2020-04-07 16:00:26 -0700[0m
+[[1;30;49mDEBUG[0m]   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#show[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/show.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/show.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m4.1ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in [0;33;49m480ms[0m [0;30;49m(Views: 434.3ms | ActiveRecord: 3.2ms)[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1" [0m for [0;33;49m1[0m[0;30;49m  at 2020-04-07 16:03:40 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#show[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/show.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/show.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m1.4ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in 86ms [0;30;49m(Views: 57.5ms | ActiveRecord: 1.2ms)[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/" [0m for [0;33;49m1[0m[0;30;49m  at 2020-04-07 16:03:43 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#index[0m as [0;33;49mHTML[0m
+[INFO ]   Rendering posts/index.html.erb within layouts/application
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/index.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m6.0ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in 60ms [0;30;49m(Views: 54.5ms | ActiveRecord: 3.5ms)[0m

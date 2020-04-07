@@ -1172,3 +1172,103 @@ Processing by PostsController#edit as HTML
   Rendered posts/edit.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
   [1m[35m (0.9ms)[0m  rollback transaction
+[[1;30;49mDEBUG[0m]   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (2.2ms)[0m  [1m[31mDELETE FROM "posts";[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'posts';[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[[1;30;49mDEBUG[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2020-04-07 23:04:03.786781"], ["updated_at", "2020-04-07 23:04:03.786781"]]
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:03 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#show[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/show.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/show.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m1.8ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in [0;33;49m316ms[0m [0;30;49m(Views: 306.4ms | ActiveRecord: 0.1ms)[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[[1;30;49mDEBUG[0m]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2020-04-07 23:04:04.123677"], ["updated_at", "2020-04-07 23:04:04.123677"]]
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:04 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#show[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/show.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/show.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m0.4ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in 24ms [0;30;49m(Views: 3.0ms | ActiveRecord: 0.1ms)[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[[1;30;49mDEBUG[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2020-04-07 23:04:04.156692"], ["updated_at", "2020-04-07 23:04:04.156692"]]
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:04 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#show[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/show.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/show.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m0.6ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in 5ms [0;30;49m(Views: 3.3ms | ActiveRecord: 0.1ms)[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/new" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:04 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#new[0m as [0;33;49mHTML[0m
+[INFO ]   Rendering posts/new.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/new.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m0.6ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in 6ms [0;30;49m(Views: 3.0ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1;32;49mPOST   [0m[1;37;49m "/posts" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:04 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#create[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "title"=>"My post title", "description"=>"My post description", "commit"=>"Submit Post"}
+[[1;30;49mDEBUG[0m]   [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[[1;30;49mDEBUG[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My post title"], ["description", "My post description"], ["created_at", "2020-04-07 23:04:04.193667"], ["updated_at", "2020-04-07 23:04:04.193667"]]
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[INFO ] Redirected to http://www.example.com/posts/1
+[INFO ] Completed [0;32;49m302 Found[0m in 3ms [0;30;49m(ActiveRecord: 0.8ms)[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:04 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#show[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/show.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/show.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m0.3ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in 4ms [0;30;49m(Views: 2.7ms | ActiveRecord: 0.0ms)[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[[1;30;49mDEBUG[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post"], ["description", "My post desc"], ["created_at", "2020-04-07 23:04:04.211287"], ["updated_at", "2020-04-07 23:04:04.211287"]]
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1/edit" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:04 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#edit[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/edit.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/edit.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m30.4ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in 39ms [0;30;49m(Views: 34.8ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1;32;49mPATCH  [0m[1;37;49m "/posts/1" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:04 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#update[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "post"=>{"title"=>"My edit", "description"=>"My post description"}, "commit"=>"Update Post", "id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[[1;30;49mDEBUG[0m]   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[[1;30;49mDEBUG[0m]   [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "My edit"], ["description", "My post description"], ["updated_at", "2020-04-07 23:04:04.280157"], ["id", 1]]
+[[1;30;49mDEBUG[0m]   [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[INFO ] Redirected to http://www.example.com/posts/1
+[INFO ] Completed [0;32;49m302 Found[0m in 6ms [0;30;49m(ActiveRecord: 0.4ms)[0m
+[INFO ] [1;32;49mGET    [0m[1;37;49m "/posts/1" [0m for [0;33;49m127.0.0.1[0m[0;30;49m  at 2020-04-07 16:04:04 -0700[0m
+[INFO ] [0;35;49m===[0m Processing by [0;35;49mPostsController#show[0m as [0;33;49mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1;30;49mDEBUG[0m]   [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering posts/show.html.erb within layouts/application
+[INFO ] [0;30;49m  Rendered [0m[1;30;49mposts/show.html.erb[0m [0;30;49mwithin [0m[1;30;49mlayouts/application[0m [0;30;49m0.3ms[0m
+[INFO ] Completed [0;32;49m200 OK[0m in 8ms [0;30;49m(Views: 5.0ms | ActiveRecord: 0.0ms)[0m
+[[1;30;49mDEBUG[0m]   [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
